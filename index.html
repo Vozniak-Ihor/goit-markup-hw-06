@@ -440,47 +440,47 @@
             <span class="model-form-input-desk">Name</span>
             <span class="model-form-input-wrapper">
               <input
-              type="text"
-              name="user-name"
-              class="model-form-input"
-              required
-              pattern="[a-zA-Zа-яА-Я]+"
-              minlength="2"
-            />
-            <svg width="12"; height="12" class="model-form-input-icon">
-              <use href="./img/sprite.svg#icon-name"></use>
-            </svg>
-          </span> 
+                type="text"
+                name="user-name"
+                class="model-form-input"
+                required
+                pattern="[a-zA-Zа-яА-Я]+"
+                minlength="2"
+              />
+              <svg width="12" ; height="12" class="model-form-input-icon">
+                <use href="./img/sprite.svg#icon-name"></use>
+              </svg>
+            </span>
           </label>
           <label class="model-form-field">
             <span class="model-form-input-desk">Phone</span>
             <span class="model-form-input-wrapper">
               <input
-              type="tel"
-              name="user-phone"
-              class="model-form-input"
-              required
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
-              title="xxx-xxx-xx-xx"
-            />
-            <svg width="13"; height="13" class="model-form-input-icon">
-              <use href="./img/sprite.svg#icon-phone"></use>
-            </svg>
-          </span>
+                type="tel"
+                name="user-phone"
+                class="model-form-input"
+                required
+                pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+                title="xxx-xxx-xx-xx"
+              />
+              <svg width="13" ; height="13" class="model-form-input-icon">
+                <use href="./img/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
           </label>
           <label class="model-form-field">
             <span class="model-form-input-desk">Email</span>
             <span class="model-form-input-wrapper">
               <input
-              type="email"
-              name="user-emial"
-              class="model-form-input"
-              required
-            />
-            <svg width="15"; height="12" class="model-form-input-icon">
-              <use href="./img/sprite.svg#icon-email"></use>
-            </svg>
-          </span>
+                type="email"
+                name="user-emial"
+                class="model-form-input"
+                required
+              />
+              <svg width="15" ; height="12" class="model-form-input-icon">
+                <use href="./img/sprite.svg#icon-email"></use>
+              </svg>
+            </span>
           </label>
           <label class="model-form-field">
             <span class="model-form-input-desk">Comment</span>
@@ -490,8 +490,8 @@
               placeholder="Text input"
             ></textarea>
           </label>
-          <input
-            id="user-policy"
+          <!-- <input
+            id="+"
             type="checkbox"
             name="user-policy"
             class="model-form-checkbox"
@@ -499,6 +499,21 @@
           <label for="user-policy" class="model-fomr-user-policy"
             >I accept the terms and conditions of the
             <a href="" class="model-fomr-user-policy-link">Privacy Policy</a>
+          </label> -->
+          <input
+            id="modal-form-checkbox"
+            type="checkbox"
+            name="accept-condition"
+            class="modal-form-checkbox-input hidden"
+          />
+          <label for="modal-form-checkbox" class="modal-form-checkbox-label">
+            <span class="modal-form-accept-condition"
+              >I accept the terms and conditions of the &nbsp;<a
+                href=""
+                class="privacy-policy"
+                >Privacy Policy</a
+              ></span
+            >
           </label>
           <button type="submit" class="model-form-submit">Send</button>
         </form>
