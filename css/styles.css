@@ -640,7 +640,7 @@ body {
 }
 
 .footer-text {
-  max-width: 264px;
+ width: 264px;
   color: #e7e9fc;
 
   font-family: var(--primary-font-family);
@@ -921,9 +921,6 @@ body {
 .modal-form-checkbox-label::before {
   content: " ";
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   cursor: pointer;
   width: 16px;
@@ -942,6 +939,8 @@ body {
   border-radius: 2px;
   background-image: url(../img/checkbox.svg);
   background-repeat: no-repeat;
+  background-position: center;
+  background-origin: border-box;
 }
 
 .modal-form-accept-condition {
@@ -954,6 +953,10 @@ body {
 
 .privacy-policy {
   color: var(--accent);
+}
+
+.footer-form{
+  display: flex;
 }
 
 .footer-form-p-subscribe {
@@ -970,54 +973,71 @@ body {
 
 .footer-form-subscribe-input {
   display: flex;
-  align-items: center;
   width: 264px;
   height: 40px;
-  background-color: transparent;
   padding: 8px 16px;
+  margin-right: 24px;
+  background-color: transparent;
+
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 24px;
   letter-spacing: 0.04em;
+  color: white;
   border: 1px solid rgba(255, 255, 255, 0.3);
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border-color var(--transition);
 }
 
-.footer-form-subscribe-input::placeholder{
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 400;
-font-size: 12px;
-line-height: 24px;
-letter-spacing: 0.04em;
-color: rgba(255, 255, 255, 0.6);
+.footer-form-subscribe-input::placeholder {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+
 }
 
 .footer-form-subscribe-input:hover,
-.footer-form-subscribe-input:focus{
+.footer-form-subscribe-input:focus {
   outline: none;
   border-color: var(--accent);
 }
 
-.footer-form-bnt-subscribe{
+.footer-form-bnt-subscribe {
+  position: relative;
+
   padding: 8px 64px 8px 24px;
-  background: #4D5AE5;
+  background: #4d5ae5;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-color: transparent;
-  font-family: 'Roboto';
-font-style: normal;
-font-weight: 500;
-font-size: 16px;
-line-height: 24px;
-letter-spacing: 0.04em;
-color: #FFFFFF;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #ffffff;
+  transition: background-color var(--transition);
 }
 
 .footer-form-bnt-subscribe:hover,
-.footer-form-bnt-subscribe:focus{
+.footer-form-bnt-subscribe:focus {
   background-color: #404bbf;
+}
+
+.footer-form-bnt-subscribe-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 20px;
 }
