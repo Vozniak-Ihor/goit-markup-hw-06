@@ -908,14 +908,14 @@ body {
   position: absolute;
 }
 
-.hidden{
-  overflow: hidden;
+.opacity{
+  opacity: 0;
 }
 
 .modal-form-checkbox-label {
   position: relative;
 
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   margin-bottom: 24px;
   padding-left: 24px;
@@ -925,7 +925,6 @@ body {
   content: " ";
   position: absolute;
   
-
   cursor: pointer;
   width: 16px;
   height: 16px;
@@ -933,7 +932,7 @@ body {
   border: 1.25px solid #2e2f42;
   border-radius: 2px;
   left: 0;
-  top: 0;
+  top: -1px;
   transition: background-color var(--transition), border-color var(--transition);
 }
 
@@ -1048,4 +1047,8 @@ body {
   transform: translateY(-50%);
   width: 24px;
   height: 20px;
+}
+
+.modal-form-checkbox-input:focus + .modal-form-checkbox-label::before{
+  border: 2px solid black;
 }
